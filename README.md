@@ -1,7 +1,7 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-f4981d0f882b2a3f0472912d15f9806d57e124e0fc890972558857b51b24a6f9.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=10120387)
 <div align="center">
 
-# Project Name
+# Multi-Purpose Camera
 [![Report Issue on Jira](https://img.shields.io/badge/Report%20Issues-Jira-0052CC?style=flat&logo=jira-software)](https://temple-cis-projects-in-cs.atlassian.net/jira/software/c/projects/DT/issues)
 [![Deploy Docs](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml)
 [![Documentation Website Link](https://img.shields.io/badge/-Documentation%20Website-brightgreen)](https://applebaumian.github.io/tu-cis-4398-docs-template/)
@@ -40,10 +40,45 @@ Discuss what you need to develop this project. This includes background informat
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/ApplebaumIan">
-            <img src="https://avatars.githubusercontent.com/u/9451941?v=4" width="100;" alt="ApplebaumIan"/>
+        <a href="">
             <br />
-            <sub><b>Ian Tyler Applebaum</b></sub>
+            <sub><b>Justin Ardamoy</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="">
+            <br />
+            <sub><b>Tim Brennan</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="">
+            <br />
+            <sub><b>Nicholas Coffin</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/jo-k0806">
+            <br />
+            <sub><b>Joanne Kim</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="">
+            <br />
+            <sub><b>Keita Nakashima</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="">
+            <br />
+            <sub><b>Sid Philips</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="">
+            <br />
+            <sub><b>Tyler Schemaitat</b></sub>
         </a>
     </td>
     <td align="center">
