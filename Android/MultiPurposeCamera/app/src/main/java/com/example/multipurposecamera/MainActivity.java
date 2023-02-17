@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         SSHConnection connection = new SSHConnection();
         connection.execute();
 
-        View view = new View();
-        layout.add(view);
+        //View view = new View();
+        //layout.add(view);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
