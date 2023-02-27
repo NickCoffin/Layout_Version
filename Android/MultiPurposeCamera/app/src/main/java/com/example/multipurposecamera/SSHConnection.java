@@ -7,6 +7,10 @@ import java.io.InputStream;
 import android.os.AsyncTask;
 import android.util.Log;
 
+
+/**
+ * The class  SSH connection extends async task< void, void, string>
+ */
 public class SSHConnection extends AsyncTask<Void, Void, String>{
 
     protected String doInBackground(Void... voids){
@@ -22,7 +26,15 @@ public class SSHConnection extends AsyncTask<Void, Void, String>{
             Log.d("Result", result);
     }
 
+
+    /**
+     *
+     * Start_connection
+     *
+     * @return String
+     */
     public static String start_connection() {
+
         System.out.println("Starting creating connection");
         String password = "ZxXGmnQ9v$T)CBrlKFcell=gG2@jh?F=";
         password = null;

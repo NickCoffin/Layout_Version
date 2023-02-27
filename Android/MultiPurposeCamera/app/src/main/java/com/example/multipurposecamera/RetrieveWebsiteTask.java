@@ -10,6 +10,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
+
+/**
+ * The class Retrieve website task extends async task< void, void, string>
+ */
 public class RetrieveWebsiteTask extends AsyncTask<Void, Void, String> {
 
     @Override
