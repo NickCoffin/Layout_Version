@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,35 +25,56 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout constraintLayout = findViewById(R.id.main_layout);
         System.out.println("*******************\n\n\n" + constraintLayout);
 
+        View rect = fill_rectangle(Color.BLUE);
+        rect.setLayoutParams(createLayoutParams(100, 100, 100, 100, 600, 600));
+        constraintLayout.addView(rect);
+        rect.setVisibility(View.INVISIBLE);
+
+        ConstraintLayout camera_layout = construct_camera_layout(constraintLayout);
+
+
         Button button = new Button(this);
-        button.setLayoutParams(createLayoutParams(100, -1, -1, 100, 600, 600));
+        button.setLayoutParams(createLayoutParams(50, -1, 50, -1, 100, 100));
         button.setAlpha(0.5f);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                button.setVisibility(View.INVISIBLE);
+                camera_layout.setVisibility(View.VISIBLE);
             }
         });
         constraintLayout.addView(button);
+    }
 
-        ConstraintLayout constraintLayout_camera1 = new ConstraintLayout(this);
-
-        constraintLayout_camera1.setLayoutParams(createLayoutParams(100, -1, -1, 100, 600, 600));
-        constraintLayout.addView(constraintLayout_camera1);
-
-
-//        View fill_rect = fill_rectangle();
-//        fill_rect.setLayoutParams(createLayoutParams(16, -1, -1, 16, 600, 600));
-//        constraintLayout_camera1.addView(fill_rect);
-//        View round_rect = round_rectangle();
-//        round_rect.setLayoutParams(createLayoutParams(16, -1, -1, 16, 600, 600));
-//        constraintLayout_camera1.addView(round_rect);
-        View rect = fill_rectangle(Color.BLUE);
-        rect.setLayoutParams(createLayoutParams(100, 100, 100, 100, 600, 600));
-        constraintLayout.addView(rect);
+    public ConstraintLayout construct_camera_layout(ConstraintLayout main_layout){
+        int width = get_width_of_screen();
 
 
+        ConstraintLayout camera_layout = new ConstraintLayout(this);
+        camera_layout.setLayoutParams(createLayoutParams(0, 0, 0, 0, -1, -1));
+        main_layout.addView(camera_layout);
+        camera_layout.setVisibility(View.INVISIBLE);
+        int camera_width = (int)(width*0.8);
+        int camera_height = (int)(camera_width * 0.62);
+        int camera_padding = 100;
 
+        ConstraintLayout[] layouts = new ConstraintLayout[4];
+        for(int i = 0; i < layouts.length; i++){
+            ConstraintLayout constraintLayout_camera1 = new ConstraintLayout(this);
+            constraintLayout_camera1.setLayoutParams(createLayoutParams(100 + (camera_height + camera_padding) * i, -1, -1, 100, camera_width, camera_height));
+            camera_layout.addView(constraintLayout_camera1);
+            layouts[i] = constraintLayout_camera1;
+        }
+
+        for(int i = 0; i < layouts.length; i++){
+            View border = rectangle(Color.RED, 15);
+            border.setLayoutParams(createLayoutParams(0, 0, 0, 0, -1, -1));
+            View fill = fill_rectangle(Color.BLUE);
+            fill.setLayoutParams(createLayoutParams(0, 0, 0, 0, -1, -1));
+            layouts[i].addView(fill);
+            layouts[i].addView(border);
+        }
+        return camera_layout;
     }
 
     public View round_rectangle(){
@@ -74,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     public static Paint paint_fill(int color){
         Paint paint = new Paint();
         paint.setColor(color);
-        paint.setAlpha(128);
+        //paint.setAlpha(128);
         return paint;
     }
 
@@ -83,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         paint_stroke.setStyle(Paint.Style.STROKE);
         paint_stroke.setStrokeWidth(thickness);
         paint_stroke.setColor(color);
-        paint_stroke.setAlpha(128);
+        //paint_stroke.setAlpha(128);
         return paint_stroke;
     }
 
