@@ -39,9 +39,6 @@ public class MainActivity extends AppCompatActivity {
         cameras = new Camera_Manager();
 
 
-
-
-
         main_layout = new ConstraintLayout(this);
         main_layout.setLayoutParams(createLayoutParams(200, 0, 0, 0, -1, -1 ));
         constraintLayout.addView(main_layout);
@@ -51,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         construct_top_navigation_bar(constraintLayout);
     }
 
+    // The Nav Bar
+    // ConstraintLayout - Changing the current layout to something else
     public ConstraintLayout construct_top_navigation_bar(ConstraintLayout constraintLayout){
         ConstraintLayout nav_layout = new ConstraintLayout(this);
         nav_layout.setLayoutParams(createLayoutParams(0, -1, 0, 0, -1, 200));
@@ -81,15 +80,13 @@ public class MainActivity extends AppCompatActivity {
         nav_layout.addView(camera_button);
 
 
-
-
-
         View top_navigator = fill_rectangle(background_color1);
         top_navigator.setLayoutParams(createLayoutParams(0, -1, 0, 0, -1, 200));
         nav_layout.addView(top_navigator);
         return null;
     }
 
+    // Saving Policy Page (With the red box)
     public ConstraintLayout construct_saving_policy_layout(ConstraintLayout main_layout){
         ConstraintLayout layout = new ConstraintLayout(this);
         main_layout.addView(layout);
@@ -105,11 +102,10 @@ public class MainActivity extends AppCompatActivity {
 
         layout.addView(rect);
 
-
-
         return layout;
     }
 
+    // Settings Page
     public ConstraintLayout construct_settings_layout(ConstraintLayout main_layout){
         ConstraintLayout settings_layout = new ConstraintLayout(this);
         main_layout.addView(settings_layout);
@@ -155,13 +151,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
-
-
-
         return settings_layout;
     }
 
+
+    // Camera Layout
     public ConstraintLayout construct_camera_layout(ConstraintLayout main_layout){
         int width = get_width_of_screen();
 
