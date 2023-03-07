@@ -3,11 +3,13 @@ package com.example.layout_version;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -20,6 +22,30 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
+
+        ImageView back_home_im;
+        TextView back_home_txt;
+
+        back_home_im = (ImageView) findViewById(R.id.back_home_btn_setting);
+        back_home_txt = (TextView) findViewById(R.id.back_home_text_setting);
+
+        back_home_im.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (Settings.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        back_home_txt.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (Settings.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
