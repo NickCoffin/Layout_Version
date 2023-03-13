@@ -38,26 +38,26 @@ The multi purpose camera is a product that can be used in a variety of ways. Ess
 
 <!--The background will contain a more detailed description of the product and a comparison to existing similar projects/products. A literature search should be conducted and the results listed. Proper citation of sources is required. If there are similar open-source products, you should state whether existing source will be used and to what extent. If there are similar closed-source/proprietary products, you should state how the proposed product will be similar and different.-->
 <b>Resources</b>
-</n>https://github.com/rpellerin/raspberry-pi-home-automation (python version) 
-</n>https://github.com/Ruud14/SecurityCamera (python version) 
-</n>https://github.com/MieszkoMakuch/pi-security-camera (python version) 
-</n>https://github.com/TaylorTheDeveloper/AzureCloudCam (python version) 
-</n>https://pyshine.com/Send-video-over-UDP-socket-in-Python/
+- https://github.com/rpellerin/raspberry-pi-home-automation (python version) 
+- https://github.com/Ruud14/SecurityCamera (python version) 
+- https://github.com/MieszkoMakuch/pi-security-camera (python version) 
+- https://github.com/TaylorTheDeveloper/AzureCloudCam (python version) 
+- https://pyshine.com/Send-video-over-UDP-socket-in-Python/
 
 ## Required Resources
 
 <!--Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.-->
 <b>Hardware Requirements</b>
-</n>Raspberry Pi
-</n>Camera
-</n>Microphone
-</n>Wi-Fi/Bluetooth Adapter
-</n>MicroSD reader & MicroSD card
-</n>
-</n><b>Software Requirements</b>
-</n>Android Studios
-</n>AWS
-</n>MySQL
+- Raspberry Pi
+- Camera
+- Microphone
+- Wi-Fi/Bluetooth Adapter
+- MicroSD reader & MicroSD card
+
+- <b>Software Requirements</b>
+- Android Studios
+- AWS
+- MySQL
 
 
 ## Collaborators
