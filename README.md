@@ -53,8 +53,8 @@ The multi purpose camera is a product that can be used in a variety of ways. Ess
 - Microphone
 - Wi-Fi/Bluetooth Adapter
 - MicroSD reader & MicroSD card
-
-- <b>Software Requirements</b>
+\n
+<b>Software Requirements</b>
 - Android Studios
 - AWS
 - MySQL
