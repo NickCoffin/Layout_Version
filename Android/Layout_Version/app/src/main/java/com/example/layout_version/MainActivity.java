@@ -8,12 +8,15 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.ScrollView;
+import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
     public ConstraintLayout main_layout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ImageView btn;
+        Button lib;
 
         ConstraintLayout constraintLayout = findViewById(R.id.main_layout);
         System.out.println("*******************\n\n\n" + constraintLayout);
@@ -43,12 +46,22 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout camera_layout = construct_camera_layout(main_layout);
 
         btn = (ImageView) findViewById(R.id.settings);
+        lib = (Button) findViewById(R.id.library);
 
         btn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (MainActivity.this,Settings.class);
+                startActivity(intent);
+            }
+        });
+
+        lib.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (MainActivity.this,Library.class);
                 startActivity(intent);
             }
         });

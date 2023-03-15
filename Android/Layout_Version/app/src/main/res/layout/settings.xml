@@ -6,11 +6,12 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
         android:layout_margin="0dp"
         android:background="#8EEEE7"
+        android:padding="12dp"
         android:translationZ="1dp"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -26,29 +27,62 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:text="Back"
-            android:textColor="@color/black"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/setting_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:paddingBottom="15dp"
-        android:translationZ="1dp"
-        android:background="#8EEEE7"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150px"
+            android:layout_weight="1"
+            android:background="#8EEEE7"
+            android:gravity="center"
             android:text="Settings"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/black"
-            android:gravity="center"
-            />
+            android:textColor="@color/black" />
 
+        <TextView
+            android:id="@+id/spacer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/notification_settings"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:background="#673AB7"
+            android:gravity="center"
+            android:text="Notifications"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/spacer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/cloud_saving_settings2"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_weight="1"
+            android:background="#F44336"
+            android:gravity="center"
+            android:text="Cloud Saving"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
