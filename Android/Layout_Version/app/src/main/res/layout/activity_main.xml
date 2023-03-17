@@ -5,40 +5,60 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:backgroundTint="#03A9F4"
+    tools:context=".MainActivity">
 
-        <RelativeLayout
-            android:id="@+id/nav_bar_top"
-            android:layout_width="match_parent"
+    <RelativeLayout
+        android:id="@+id/nav_bar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:padding="12dp"
+        android:translationZ="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-46dp">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:translationZ="1dp"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_marginStart="16dp"
+            android:text="MP.Cam"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="MP.Cam"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_menu_24" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="35dp"
-                android:src="@drawable/baseline_cloud_queue_24" />
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#0000FF"
+            android:text="Connect"
+            android:textSize="10sp"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
-            <ImageView
-                android:id="@+id/settings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/baseline_menu_24" />
+        <ImageView
+            android:id="@+id/policy"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="130dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#0000FF"
+            android:text="View Policy"
+            android:textSize="10sp" />
 
-        </RelativeLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/nav_bar_bottom"
@@ -55,8 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#c4fffd"
-            android:textColor="@color/black"
-            android:text="View" />
+            android:text="View"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/library"
@@ -64,12 +84,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/white"
-            android:textColor="@android:color/black"
-            android:text="Library" />
+            android:text="Library"
+            android:textColor="@android:color/black" />
     </LinearLayout>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView btn;
         Button lib;
+        Button con;
+        ImageView pol;
 
         ConstraintLayout constraintLayout = findViewById(R.id.main_layout);
         System.out.println("*******************\n\n\n" + constraintLayout);
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
         btn = (ImageView) findViewById(R.id.settings);
         lib = (Button) findViewById(R.id.library);
+        con = (Button) findViewById(R.id.connect);
+        pol = (ImageView) findViewById(R.id.policy);
 
         btn.setOnClickListener(new View.OnClickListener()
         {
@@ -65,7 +69,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        con.setOnClickListener(new View.OnClickListener()
+        {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent (MainActivity.this,Connect.class);
+               startActivity(intent);
+           }
+        });
+        pol.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (MainActivity.this,Policy.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public ConstraintLayout construct_camera_layout(ConstraintLayout main_layout){
